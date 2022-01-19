@@ -133,7 +133,7 @@ installOpenCV <- function(batch = FALSE) {
       if (any(archAvail)) {
         if (R.Version()$major >= "4") {
           rtools4 <- TRUE
-          rtools4Path <- gsub("\\\\", "/", gsub("/usr/bin", "", pkgbuild::rtools_path()))
+          rtools4Path <- gsub("\\\\", "/", gsub("/usr/bin", "", pkgbuild::rtools_path()[1]))
 
         } else {
           rtools4 <- FALSE
