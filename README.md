@@ -79,3 +79,13 @@ because most of these extra modules are (1) too specific for most applications o
 
 We will work toward providing a mechanism to install the extra modules, but this 
 is not part of our immediate plans. 
+
+### Changes compared to the original ROpenCVLite package.
+I make changes in opencv.R as following:
+From: rtools4Path <- gsub("\\", "/", gsub("/usr/bin", "", pkgbuild::rtools_path()))
+To:
+rtools4Path <- gsub("\\", "/", gsub("/usr/bin", "", pkgbuild::rtools_path()))[1]
+in oder to solve the problem of ROpenCVLite R package installation in R version 4.0 to 4.1.
+
+Best
+Jun
