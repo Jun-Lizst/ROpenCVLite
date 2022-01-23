@@ -87,5 +87,9 @@ To:
 rtools4Path <- gsub("\\", "/", gsub("/usr/bin", "", pkgbuild::rtools_path()))[1]
 in oder to solve the problem of ROpenCVLite R package installation in R version 4.0 to 4.1.
 
+If your pkgbuild::rtools_path() have two outputs, like below listed:
+[1] "C:\\rtools40/usr/bin"    "C:\\rtools40/ucrt64/bin"
+You should use my modified ROpenCVLite in order to install this package successfully.
+
 Best
 Jun
